@@ -4,3 +4,9 @@ because of it's composibility
 
 JSX will render only one parent element, but that parent element can have multiple child element
 for ex: parent element can be <main>, <section>, <article>
+
+Imperative: give step-by-step instruction to finish an task
+
+Declaritive: simply describe what should be display in webpage & expect the tool to do for you
+
+Composable: breaking an task or problem into smaller sub-tasks / sub-problems and solving them
