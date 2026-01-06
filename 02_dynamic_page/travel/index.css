@@ -2,7 +2,15 @@ html, body {
     margin: 0;
 }
 
-.nav-header {
+body {
+    font-family: Inter;
+}
+
+.container {
+    margin: 45px 40px;
+}
+
+header {
     background: #F55A5A;
     display: flex;
     justify-content: center;
@@ -11,15 +19,14 @@ html, body {
     height: 55px;
 }
 
-.nav-header > img {
+header > img {
     width: 24px;
     margin-right: 7px;
 }
 
-.nav-header > h1 {
-    font-size: 1.5rem;
+header > h1 {
+    font-size: 0.9rem;
     font-weight: 500;
-    font-family: Inter;
 }
 
 article.journal-entry {
