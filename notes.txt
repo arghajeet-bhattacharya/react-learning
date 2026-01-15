@@ -10,3 +10,20 @@ Imperative: give step-by-step instruction to finish an task
 Declaritive: simply describe what should be display in webpage & expect the tool to do for you
 
 Composable: breaking an task or problem into smaller sub-tasks / sub-problems and solving them
+
+Props: properties / data passed into component, they are immutable (they can't be changed)
+State: value managed by component, they are mutable (they can be changed), any time we have changing values 
+    that should be saved/displayed we use state
+
+View as function of state:
+
+1. Render: react runs your function (App, TravelList etc) & display whatever gets returned. The function will run again
+only 
+    * if it receive new props from above
+    * it's internal state values changes
+
+2. setState: changing a local non-state variable doesn't cause react to re-render the component.
+    changing state with in-build 'setState' function does
+
+3. view = function(state) : when state changes & react re-render your component, something new get's returned
+    & replaced what used to be on page
