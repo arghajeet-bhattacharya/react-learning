@@ -3,7 +3,7 @@ import dummyJokes from './jokes-data';
 
 export default function App() {
     const jokeComponent = dummyJokes.map(element => {
-        return <Jokes setup={element.setup} punchline={element.punchline}/>
+        return <Jokes setup={element.setup} punchline={element.punchline} key={element.id} id={element.id}/>
     })
     return (
         <main>

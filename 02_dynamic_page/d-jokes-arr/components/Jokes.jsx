@@ -1,11 +1,18 @@
-export default function Contact({ setup, punchline, upvote }) {
+import {useState} from 'react';
+
+export default function Contact({ setup, punchline, id }) {
+
+    const [isDisplay, setIdDisplay] = useState(false);
+
+    const handleDisplayPunchlineClick = (id) => {
+        setIdDisplay(prev => !prev);
+    }
+
     return (
         <>
-            {setup && <p>Setup 1:: {setup}</p>}
-            <p style={{ display: setup ? 'block' : 'none' }}>Setup 2:: {setup}</p>
-            <p>Punchline:: {punchline}</p>
-            {upvote && <p>Upvote:: {upvote}</p>}
-            {upvote && <p>Upvote Summary:: {upvote > 5 ? 'Greater than 5' : 'Less than 5'}</p>}
+            {setup && <h3>{setup}</h3>}
+            {isDisplay && <p>{punchline}</p>}
+            <button onClick={handleDisplayPunchlineClick}>{isDisplay ? 'Hide' : 'Show'} Display</button>
             <hr></hr>
         </>
     )

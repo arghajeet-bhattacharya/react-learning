@@ -7,7 +7,24 @@ export default function Main() {
         setIngredientList(prevArr => [...prevArr, newIngredient]);
     }
 
-    const ingredientAddedList = ingredientList.map(element => <li key={element}>{element}</li>)
+    const ingredientAddedList = ingredientList.map(element => <li key={element}>{element}</li>);
+
+    const displaySection = () => {
+        if (ingredientAddedList.length > 0) {
+            return <section>
+                <h2>Ingredients on hand:</h2>
+                <ul className="ingredients-list" aria-live="polite">{ingredientAddedList}</ul>
+
+                {ingredientAddedList.length > 4 && <div className="get-recipe-container">
+                    <div>
+                        <h3>Ready for a recipe?</h3>
+                        <p>Generate a recipe from your list of ingredients.</p>
+                    </div>
+                    <button>Get a recipe</button>
+                </div>}
+            </section>
+        }
+    }
 
     return (
         <main>
@@ -20,9 +37,7 @@ export default function Main() {
                 />
                 <button>Add Ingredient</button>
             </form>
-            <ul>
-                {ingredientAddedList}
-            </ul>
+            {displaySection()}
         </main>
     )
 }
