@@ -27,3 +27,6 @@ only
 
 3. view = function(state) : when state changes & react re-render your component, something new get's returned
     & replaced what used to be on page
+
+
+Whenever an state is updated in an component, that component & all it's child component will re-rendered as well
